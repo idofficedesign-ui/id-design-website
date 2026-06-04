@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects - ID Design</title>
+
+  <link href="./dist/output.css" rel="stylesheet">
+
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body class="bg-[#F8F7F4] scroll-smooth">
+
+  <!-- Navbar -->
+
+  <div id="navbar"></div>
+
+
+<!-- Hero -->
+
+<section  class="pt-20 pb-20 px-8 md:px-20">
+
+  <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-6">
+    Our Portfolio
+  </p>
+
+  <h1 class="text-5xl md:text-6xl leading-[1.1] font-light text-[#111827] max-w-5xl mb-6">
+    Curated Interior
+    Projects Designed
+    For Modern
+    Businesses
+  </h1>
+
+</section>
+
+
+  <!-- Projects Grid -->
+
+  <section
+    data-aos="fade-up"
+    class="px-8 md:px-20 pb-10"
+  >
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      
+<!-- Project 1 -->
+
+<div
+  onclick="openProjectModal('project1-office.html')"
+  class="group cursor-pointer block"
+>
+
+  <div class="overflow-hidden rounded-3xl">
+
+    <img
+      src="./images/project3/VIEW 1.png"
+      class="w-full h-[320px] md:h-[450px] object-cover group-hover:scale-105 transition duration-700"
+    />
+
+  </div>
+
+  <div class="mt-6">
+
+    <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-2">
+      Workspace Interior
+    </p>
+
+    <h2 class="text-3xl font-light text-[#111827] mb-2">
+      Green Space Office
+    </h2>
+
+    <p class="text-gray-500">
+      Jakarta, Indonesia
+    </p>
+
+  </div>
+
+</div>
+
+
+
+      
+<!-- Project 2 -->
+
+<div
+  onclick="openProjectModal('project2-office.html')"
+  class="group cursor-pointer block md:mt-20"
+>
+
+  <div class="overflow-hidden rounded-3xl">
+
+    <img
+      src="./images/project2/p-2-1.png"
+      class="w-full h-[320px] md:h-[450px] object-cover group-hover:scale-105 transition duration-700"
+    />
+
+  </div>
+
+  <div class="mt-6">
+
+    <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-2">
+      Workspace Interior
+    </p>
+
+    <h2 class="text-3xl font-light text-[#111827] mb-2">
+      Executive Office
+    </h2>
+
+    <p class="text-gray-500">
+      Surabaya, Indonesia
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<!-- Project 3 -->
+
+<div
+  onclick="openProjectModal('project3-office.html')"
+  class="group cursor-pointer block"
+>
+
+  <div class="overflow-hidden rounded-3xl">
+
+    <img
+      src="./images/project1/p-1-1.jpeg"
+      class="w-full h-[320px] md:h-[450px] object-cover group-hover:scale-105 transition duration-700"
+    />
+
+  </div>
+
+  <div class="mt-6">
+
+    <p class="uppercase tracking-[0.2em] text-sm text-gray-500 mb-2">
+      Creative Workspace
+    </p>
+
+    <h2 class="text-3xl font-light text-[#111827] mb-2">
+      Creative Studio Hub
+    </h2>
+
+    <p class="text-gray-500">
+      Bandung, Indonesia
+    </p>
+
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+</section>
+
+
+  <!-- CTA -->
+   <div id="cta-porto"></div>
+
+
+  <!-- Footer -->
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+
+    function openImage(src) {
+
+      const modal = document.getElementById("image-modal");
+      const preview = document.getElementById("preview-image");
+
+      preview.src = src;
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+    }
+
+    function closeImage() {
+
+      const modal = document.getElementById("image-modal");
+
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+
+    }
+
+  </script>
+
+<!-- Script Form -->
+ 
+<!-- Project Access Modal -->
+
+<div
+  id="project-modal"
+  class="hidden fixed inset-0 bg-black/50 z-[999999] items-center justify-center px-6"
+>
+
+  <div class="bg-white max-w-md w-full rounded-[32px] p-10 relative">
+
+    <!-- Close -->
+
+    <button
+      onclick="closeProjectModal()"
+      class="absolute top-6 right-8 text-3xl text-gray-400 hover:text-black"
+    >
+      ×
+    </button>
+
+    <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-6">
+      Explore Project
+    </p>
+
+    <h2 class="text-3xl font-light leading-tight text-[#111827] mb-6">
+      Discover This
+      Workspace Project
+    </h2>
+
+    <p class="text-gray-500 leading-relaxed mb-8">
+      Leave your details below to access the
+      complete project experience.
+    </p>
+
+    <!-- Form -->
+    <form id="portfolio-form" class="flex flex-col gap-5">
+
+  <input
+    type="text"
+    id="name"
+    placeholder="Your Name"
+    class="border border-gray-200 px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+  />
+
+  <input
+    type="text"
+    id="whatsapp"
+    placeholder="WhatsApp Number"
+    class="border border-gray-200 px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+  />
+
+  <button
+    type="submit"
+    class="bg-[#14532D] text-white py-5 rounded-2xl text-center hover:opacity-90 transition"
+  >
+    View Project
+  </button>
+<p class="text-xs text-gray-400 text-center leading-relaxed"> Your information will only be used for project consultation purposes. </p>
+  <button
+    type="button"
+    onclick="closeProjectModal()"
+    class="text-gray-400 text-sm"
+  >
+    Skip for now
+  </button>
+
+</form>
+
+
+<script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxLlQ1ZuhYwzDKXg58CqAXtSzv0ppyYONBDWqJhhCIzyRnklB6mnzhskvDjAgZlWFoM/exec";
+
+let selectedProject = "";
+
+function openProjectModal(projectUrl) {
+
+  const alreadySubmitted = localStorage.getItem("portfolio_access");
+
+  if (alreadySubmitted === "true") {
+
+    window.location.href = projectUrl;
+    return;
+
+  }
+
+  selectedProject = projectUrl;
+
+  const modal = document.getElementById("project-modal");
+
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+}
+
+function closeProjectModal() {
+
+  const modal = document.getElementById("project-modal");
+
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
+
+}
+
+const form = document.getElementById("portfolio-form");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const data = {
+
+    name: document.getElementById("name").value,
+    whatsapp: document.getElementById("whatsapp").value
+
+  };
+
+  try {
+
+    await fetch(scriptURL, {
+
+      method: "POST",
+      body: JSON.stringify(data)
+
+    });
+
+    localStorage.setItem("portfolio_access", "true");    
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.classList.remove("hidden");
+    loadingScreen.classList.add("flex");
+    window.location.href = selectedProject;
+
+  } catch (error) {
+
+    alert("Something went wrong.");
+
+  }
+
+});
+
+</script>
+<script src="./js/include.js"></script>
+
+<!-- Loading Overlay -->
+
+<div
+  id="loading-screen"
+  class="hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-[999999] items-center justify-center"
+>
+
+  <p class="uppercase tracking-[0.35em] text-xs text-white/80">
+    Preparing Experience...
+  </p>
+
+</div>
+</body>
+
+</html>
+

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact - ID Design</title>
+
+  <link href="./dist/output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#F8F7F4] text-[#111827]">
+
+  <!-- Navbar -->
+
+  <div id="navbar"></div>
+
+  <!-- Hero -->
+
+  <section  class="pt-20 pb-20 px-8 md:px-20">
+
+    <div class="max-w-6xl">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-8">
+        Contact
+      </p>
+
+      <h1 class="text-5xl md:text-8xl leading-[1.05] font-light mb-12">
+        Let’s Build
+        Something
+        Meaningful
+      </h1>
+
+      <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">
+        Whether you're planning a new workspace,
+        commercial interior, or renovation project,
+        we’d love to hear about your vision.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+
+  <section class="px-8 md:px-20 pb-32">
+
+    <div class="grid md:grid-cols-2 gap-20">
+
+      <!-- Left -->
+
+      <div>
+
+        <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-10">
+          Contact Information
+        </p>
+
+        <div class="space-y-10">
+
+          <div>
+
+            <p class="text-sm tracking-[0.2em] uppercase text-gray-400 mb-3">
+              WhatsApp
+            </p>
+
+            <a
+              href="https://wa.me/6285121555659"
+              target="_blank"
+              class="text-2xl md:text-3xl font-light hover:text-[#14532D] transition"
+            >
+              +6285 121 555 659
+            </a>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm tracking-[0.2em] uppercase text-gray-400 mb-3">
+              Email
+            </p>
+
+            <a
+              href="mailto:id.officedesign@gmail.com"
+              class="text-2xl md:text-3xl font-light hover:text-[#14532D] transition"
+            >
+              id.officedesign@gmail.com
+            </a>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm tracking-[0.2em] uppercase text-gray-400 mb-3">
+              Instagram
+            </p>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="text-2xl md:text-3xl font-light hover:text-[#14532D] transition"
+            >
+              @iddesignstudio
+            </a>
+
+          </div>
+
+          <div>
+
+            <p class="text-sm tracking-[0.2em] uppercase text-gray-400 mb-3">
+              Location
+            </p>
+
+            <p class="text-2xl md:text-3xl font-light">
+              Jakarta, Indonesia
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Form -->
+
+      <div>
+
+        <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-10">
+          Start Your Project
+        </p>
+
+        
+<form id="contact-form" class="flex flex-col gap-6">
+
+  <input
+    type="text"
+    id="name"
+    placeholder="Your Name"
+    class="border border-gray-300 bg-transparent px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+  />
+
+  
+<input
+  type="text"
+  id="whatsapp"
+  required
+  placeholder="WhatsApp Number"
+  class="border border-gray-300 bg-transparent px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+/>
+
+
+
+  <input
+    type="text"
+    id="project_type"
+    placeholder="Project Type"
+    class="border border-gray-300 bg-transparent px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+  />
+
+  <textarea
+    id="message"
+    placeholder="Tell us about your project..."
+    rows="6"
+    class="border border-gray-300 bg-transparent px-6 py-5 rounded-2xl outline-none focus:border-[#14532D]"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="bg-[#14532D] text-white py-5 rounded-2xl hover:opacity-90 transition"
+  >
+    Start Consultation
+  </button>
+ 
+<p
+  id="success-message"
+  class="hidden text-sm text-[#14532D] text-center leading-relaxed"
+>
+  Thank you. We’ll get back to you shortly.
+</p>
+
+
+
+</form>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="bg-[#111827] text-white px-8 md:px-20 py-32">
+
+    <div class="max-w-5xl">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-[#4ADE80] mb-8">
+        ID Design Studio
+      </p>
+
+      <h2 class="text-5xl md:text-8xl leading-[1.05] font-light mb-12">
+        Designing
+        Inspiring
+        Spaces
+      </h2>
+
+      <a
+        href="project.html"
+        class="inline-block border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#111827] transition"
+      >
+        View Projects
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <div id="footer"></div>
+
+  <script src="./js/include.js"></script>
+
+<script>
+
+const contactScriptURL = "https://script.google.com/macros/s/AKfycbwk-GjWjVCz6rGxMWEwviEGSz47O1qzYtMMlINy7TjtRZUYoxeVS3LOCu8xChsWhMQm/exec";
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const data = {
+
+    name: document.getElementById("name").value,
+    whatsapp: document.getElementById("whatsapp").value,
+    project_type: document.getElementById("project_type").value,
+    message: document.getElementById("message").value,
+
+  };
+
+  try {
+    const loadingScreen = document.getElementById("loading-screen");
+
+loadingScreen.classList.remove("hidden");
+loadingScreen.classList.add("flex");
+
+    await fetch(contactScriptURL, {
+
+      method: "POST",
+      body: JSON.stringify(data)
+
+    });
+
+    const successMessage = document.getElementById("success-message");
+
+successMessage.classList.remove("hidden");
+loadingScreen.classList.remove("flex");
+loadingScreen.classList.add("hidden");
+contactForm.reset();
+
+
+
+    contactForm.reset();
+
+  } catch (error) {
+
+    alert("Something went wrong.");
+
+  }
+
+});
+
+</script>
+
+<!-- Loading Overlay -->
+
+<div
+  id="loading-screen"
+  class="hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-[999999] items-center justify-center"
+>
+
+  <p class="uppercase tracking-[0.35em] text-xs text-white/80">
+    Preparing Experience...
+  </p>
+
+</div>
+
+
+</body>
+
+</html>

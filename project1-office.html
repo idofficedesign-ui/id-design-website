@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Green Space Office - ID Design</title>
+
+  <link href="./dist/output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#F8F7F4] text-[#111827]">
+
+  <!-- Navbar -->
+
+  <div id="navbar"></div>
+  
+<section class="px-8 md:px-20 pt-10">
+
+  <a
+    href="project.html"
+    class="inline-flex items-center gap-3 text-sm tracking-[0.2em] uppercase text-gray-500 hover:text-[#14532D] transition"
+  >
+    ← Back to Projects
+  </a>
+
+</section>
+
+
+
+  <!-- Hero Image -->
+
+  <section class="pt-10 md:pt-20">
+
+    <img
+      src="./images/project3/VIEW 1.png"
+      class="w-full h-[60vh] md:h-[85vh] object-cover"
+    />
+
+  </section>
+
+  <!-- Project Info -->
+
+  <section class="px-8 md:px-20 py-20">
+
+    <div class="max-w-5xl">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-[#14532D] mb-6">
+        Workspace Interior
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-light leading-[1.1] mb-10">
+        Green Space Office
+      </h1>
+
+      <div class="grid md:grid-cols-3 gap-10 text-gray-500">
+
+        <div>
+
+          <p class="text-sm uppercase tracking-[0.2em] mb-3">
+            Location
+          </p>
+
+          <p>Jakarta, Indonesia</p>
+
+        </div>
+
+        <div>
+
+          <p class="text-sm uppercase tracking-[0.2em] mb-3">
+            Project Type
+          </p>
+
+          <p>Modern Workspace</p>
+
+        </div>
+
+        <div>
+
+          <p class="text-sm uppercase tracking-[0.2em] mb-3">
+            Year
+          </p>
+
+          <p>2025</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Description -->
+
+  <section class="px-8 md:px-20 pb-24">
+
+    <div class="max-w-4xl">
+
+      <p class="text-2xl md:text-3xl leading-relaxed font-light text-gray-700">
+        Green Space Office was designed to create a calm,
+        productive, and inspiring environment for modern
+        professionals through natural materials, open
+        layouts, and thoughtful workspace planning.
+      </p>
+
+    </div>
+
+  </section>
+
+ 
+<!-- Gallery Carousel -->
+
+<section class="px-8 md:px-20 pb-32">
+
+  <div class="relative overflow-hidden rounded-[40px]">
+
+    <!-- Slider -->
+
+    <div
+      id="gallery-slider"
+      class="flex transition-transform duration-700 ease-in-out"
+    >
+
+      <!-- Image 1 -->
+
+      <img
+        src="./images/project3/VIEW 2.png"
+        class="min-w-full h-[60vh] md:h-[80vh] object-cover"
+      />
+
+      <!-- Image 2 -->
+
+      <img
+        src="./images/project3/VIEW 3.png"
+        class="min-w-full h-[60vh] md:h-[80vh] object-cover"
+      />
+
+      <!-- Image 3 -->
+
+      <img
+        src="./images/project3/VIEW 4.png"
+        class="min-w-full h-[60vh] md:h-[80vh] object-cover"
+      />
+
+      <!-- Image 4 -->
+
+      <img
+        src="./images/project3/VIEW 5.png"
+        class="min-w-full h-[60vh] md:h-[80vh] object-cover"
+      />
+
+      
+
+    </div>
+
+    <!-- Left Button -->
+
+    <button
+      id="gallery-prev"
+      class="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/80 backdrop-blur-md shadow-xl hover:bg-white transition"
+    >
+      ←
+    </button>
+
+    <!-- Right Button -->
+
+    <button
+      id="gallery-next"
+      class="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/80 backdrop-blur-md shadow-xl hover:bg-white transition"
+    >
+      →
+    </button>
+
+  </div>
+
+</section>
+
+
+  <!-- CTA -->
+   <div id="cta-porto-detail"></div>
+
+  <!-- Footer -->
+
+  <div id="footer"></div>
+
+  <script src="./js/include.js"></script>
+
+  <!-- Script Carrosel -->
+   
+<script>
+
+const gallerySlider = document.getElementById("gallery-slider");
+
+const galleryNext = document.getElementById("gallery-next");
+const galleryPrev = document.getElementById("gallery-prev");
+
+let galleryIndex = 0;
+
+const totalGallery = gallerySlider.children.length;
+
+galleryNext.addEventListener("click", () => {
+
+  galleryIndex++;
+
+  if (galleryIndex >= totalGallery) {
+    galleryIndex = 0;
+  }
+
+  gallerySlider.style.transform = `translateX(-${galleryIndex * 100}%)`;
+
+});
+
+galleryPrev.addEventListener("click", () => {
+
+  galleryIndex--;
+
+  if (galleryIndex < 0) {
+    galleryIndex = totalGallery - 1;
+  }
+
+  gallerySlider.style.transform = `translateX(-${galleryIndex * 100}%)`;
+
+});
+
+</script>
+
+
+
+</body>
+
+</html>
+
